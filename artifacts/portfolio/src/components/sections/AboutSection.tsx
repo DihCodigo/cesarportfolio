@@ -65,7 +65,7 @@ function PhotoCard({ lang, isInView }: { lang: string; isInView: boolean }) {
         {/* Photo area — square proportion */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "1 / 1" }}>
           <img
-            src="/photo.jpg"
+            src="/photo.png"
             alt="César Diego Anovich"
             className="w-full h-full object-cover object-top transition-transform duration-700"
             style={{ transform: hovered ? "scale(1.06)" : "scale(1)" }}
@@ -91,7 +91,7 @@ function PhotoCard({ lang, isInView }: { lang: string; isInView: boolean }) {
               CA
             </div>
             <p className="text-xs text-white/25 text-center px-6 leading-relaxed">
-              {lang === "pt" ? "Adicione sua foto em /public/photo.jpg" : "Add your photo at /public/photo.jpg"}
+              {lang === "pt" ? "/photo.png" : "/photo.png"}
             </p>
           </div>
 
@@ -210,7 +210,7 @@ export function AboutSection() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {["React", "Node.js", "PHP", "Java", ".NET", "AdTech", "Prebid.js", "GTM"].map((tag) => (
+              {["React", "Node.js", "PHP", "Java", "Angular", ".NET", "AdTech", "Prebid.js", "GTM"].map((tag) => (
                 <motion.span
                   key={tag}
                   whileHover={{ scale: 1.08, y: -2 }}

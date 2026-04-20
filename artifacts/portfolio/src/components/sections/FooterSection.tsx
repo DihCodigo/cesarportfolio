@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "@/hooks/use-translation";
 import { FaWhatsapp, FaLinkedin, FaGithub, FaHeart } from "react-icons/fa";
 import { SiReact, SiTypescript, SiTailwindcss, SiVite } from "react-icons/si";
-import { Terminal, Clock, MapPin, Coffee } from "lucide-react";
+import { Terminal, Clock, MapPin, Coffee, Target } from "lucide-react";
 
 const TERMINAL_LINES_PT = [
   { text: "$ whoami", delay: 0 },
@@ -128,9 +128,9 @@ const techStack = [
 ];
 
 const socialLinks = [
-  { icon: <FaWhatsapp className="w-5 h-5" />, label: "WhatsApp", href: "https://wa.me/5500000000000", color: "#25D366" },
-  { icon: <FaLinkedin className="w-5 h-5" />, label: "LinkedIn", href: "#", color: "#0A66C2" },
-  { icon: <FaGithub className="w-5 h-5" />, label: "GitHub", href: "#", color: "#ffffff" },
+  { icon: <FaWhatsapp className="w-5 h-5" />, label: "WhatsApp", href: "https://wa.me/5512982211873", color: "#25D366" },
+  { icon: <FaLinkedin className="w-5 h-5" />, label: "LinkedIn", href: "https://www.linkedin.com/in/cesar-diego-anovich/", color: "#0A66C2" },
+  { icon: <FaGithub className="w-5 h-5" />, label: "GitHub", href: "https://github.com/DihCodigo", color: "#ffffff" },
 ];
 
 const navLinks = [

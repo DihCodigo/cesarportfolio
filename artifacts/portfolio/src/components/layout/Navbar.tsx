@@ -49,10 +49,7 @@ export function Navbar() {
           onClick={(e) => scrollToSection(e, "#top")}
           className="text-2xl font-bold font-display tracking-tight text-white flex items-center gap-2"
         >
-          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-sm">
-            CA
-          </span>
-          <span className="hidden sm:inline-block">César Anovich</span>
+          <span className="hidden sm:inline-block">César Diego Anovich</span>
         </a>
 
         {/* Desktop Nav */}

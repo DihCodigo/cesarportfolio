@@ -67,7 +67,7 @@ export function ContactSection() {
               </h3>
               <div className="space-y-3">
                 <a
-                  href="https://wa.me/5500000000000"
+                  href="https://wa.me/5512982211873"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-testid="contact-whatsapp-link"
@@ -79,7 +79,8 @@ export function ContactSection() {
                   <span className="text-sm font-medium">WhatsApp</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/cesar-diego-anovich/"
+                  target="_blank"
                   data-testid="contact-linkedin-link"
                   className="flex items-center gap-3 text-muted-foreground hover:text-[#0A66C2] transition-colors group"
                 >
@@ -89,7 +90,8 @@ export function ContactSection() {
                   <span className="text-sm font-medium">LinkedIn</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/DihCodigo"
+                  target="_blank"
                   data-testid="contact-github-link"
                   className="flex items-center gap-3 text-muted-foreground hover:text-white transition-colors group"
                 >

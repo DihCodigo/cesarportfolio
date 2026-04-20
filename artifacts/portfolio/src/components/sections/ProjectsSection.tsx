@@ -25,7 +25,7 @@ const projects: Project[] = [
     accent: "#00d4ff",
     bgAccent: "from-[#00d4ff]/10",
     tags: ["React", "CSS3", "JavaScript"],
-    number: "01",
+    number: "",
   },
   {
     titleKey: "proj.soon.title",
@@ -36,7 +36,7 @@ const projects: Project[] = [
     accent: "#00d4ff",
     bgAccent: "from-[#00d4ff]/10",
     tags: ["React", "Dark Mode", "Animation"],
-    number: "02",
+    number: "",
   },
   {
     titleKey: "proj.insync.title",
@@ -47,7 +47,7 @@ const projects: Project[] = [
     accent: "#7c3aed",
     bgAccent: "from-[#7c3aed]/10",
     tags: ["PHP", "MySQL", "HTML", "CSS", "JS"],
-    number: "03",
+    number: "",
   },
   {
     titleKey: "proj.crud.title",
@@ -58,7 +58,7 @@ const projects: Project[] = [
     accent: "#00d4ff",
     bgAccent: "from-[#00d4ff]/10",
     tags: ["MySQL", "CRUD", "SQL"],
-    number: "04",
+    number: "",
   },
   {
     titleKey: "proj.email.title",
@@ -69,7 +69,7 @@ const projects: Project[] = [
     accent: "#7c3aed",
     bgAccent: "from-[#7c3aed]/10",
     tags: ["HTML Email", "Media Queries", "Gmail", "Outlook"],
-    number: "05",
+    number: "",
   },
   {
     titleKey: "proj.gam.title",
@@ -80,7 +80,7 @@ const projects: Project[] = [
     accent: "#00d4ff",
     bgAccent: "from-[#00d4ff]/10",
     tags: ["Prebid.js", "GTM", "GAM", "Header Bidding"],
-    number: "06",
+    number: "",
   },
 ];
 
