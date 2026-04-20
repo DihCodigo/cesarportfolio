@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "FLZsE07fgxIwSxtcWn7fc"
+uri = "file://artifacts/portfolio/src/assets/hero-bg.png"
+type = "image"
+title = "abstract dark tech visualization"

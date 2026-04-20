@@ -1,0 +1,104 @@
+César Diego Anovich
+English | Português
+Sobre
+Tecnologias
+Atividades
+Projetos
+Contato
+Full-Stack Desenvolvedor.
+Gosto de criar soluções fullstack escaláveis, com foco em performance, automação e experiências de usuário incríveis — especialmente no ecossistema AdTech e Email Marketing.
+
+Programador produtivo, sociável e de mente aberta, especializado em AdTech e Performance Web.
+Experiente no desenvolvimento de sistemas web, otimização de anúncios digitais e implementação de Header Bidding, GPT e GTM. No front-end, utilizo React, HTML, CSS e JavaScript, com frameworks como Bootstrap para interfaces otimizadas.
+Sua Foto
+FrontEnd
+Linguagens & Frameworks
+Ilustração de programação
+Com uma sólida experiência em FrontEnd, transformo ideias em interfaces modernas, responsivas e altamente interativas. Domino técnicas que garantem não apenas uma ótima aparência, mas também uma experiência fluida e envolvente para o usuário. Meu foco é entregar soluções que aliam performance, usabilidade e estética em cada projeto.
+
+HTML5Estrutura páginas web
+CSS3Estiliza páginas web
+JavaScriptInteratividade no navegador
+ReactBiblioteca moderna do JS
+BootstrapFramework CSS popular
+Tailwind CSSUtilitário CSS moderno
+BackEnd
+
+Linguagens & Frameworks
+Quando o assunto é arquitetura sólida e performance, é no Back-End que eu mostro a força. Domino linguagens robustas como Java e .NET, atuando em aplicações escaláveis e seguras. Com Node.js, entrego velocidade e flexibilidade. PHP entra para codigos inteligentes, automações e APIs eficientes. Tudo isso integrado com bancos como MySQL e PostgreSQL, garantindo estrutura de dados confiável. Seja qual for o desafio por trás da interface, eu construo soluções com lógica afiada e visão de negócio.
+
+Ilustração de programação
+Node.jsJavaScript no servidor
+.NETPlataforma da Microsoft
+JavaRobusto e multiplataforma
+PHPPopular na web
+Banco de Dados
+Relacionais
+Ilustração de programação
+Tenho domínio completo sobre a manipulação e estruturação de dados. Com domínio em comandos como SELECT, INSERT, UPDATE e DELETE, sou capaz de extrair, inserir, modificar e excluir informações de forma eficiente e segura. Utilizo DDL para projetar estruturas otimizadas de tabelas, chaves e relacionamentos, e DML para manipular os dados com máxima precisão. Também aplico views, procedures, functions, índices e triggers de forma estratégica para garantir performance e organização. Independente da complexidade do sistema, garanto consistência, integridade e eficiência na camada de dados.
+
+MySQLBanco de dados relacional
+PostgreSQLAvançado e confiável
+Ferramentas & Análise
+
+Quando o assunto é inteligência digital e monetização, eu jogo em alto nível. Com o Google Tag Manager, gerencio implementações com precisão cirúrgica — sem depender de código hardcoded. No Google Analytics 4, extraio insights poderosos, traduzindo dados brutos em decisões estratégicas. Google Ad Manager? Orquestro inventário e leilões com eficiência, garantindo máximo aproveitamento da receita. Sou especialista em campanhas de Email Marketing, da segmentação à automação. E no universo da programática, Prebid.js é meu campo de batalha para otimizar lances e valorizar cada impressão. Aqui, cada clique e cada tag têm propósito — e eu estou no controle.
+
+Ilustração de programação
+GTMGerenciador de tags do Google
+Google Ad ManagerGestor de inventário de anúncios
+GA4Medição de dados de usuários
+Email MarketingCampanhas de Email MKT
+Prebid.jsHeader Bidding com Prebid.js
+O que faço no dia a dia
+No meu cotidiano profissional, sou responsável por integrar tecnologia, performance e estratégia de forma harmônica. Estou à frente da criação de soluções escaláveis com foco em automação, conversão e resultados, garantindo experiências digitais ágeis e otimizadas.
+
+Atuo com AdTech, implementando estratégias como Header Bidding com Prebid.js, Google Publisher Tag, Google Tag Manager e configurações avançadas de ad refresh, lazy loading, tracking por S2S e eventos de conversão personalizados.
+
+Também analiso e melhoro métricas de visibilidade, viewability, CTR e outras KPIs importantes para otimizar a performance de campanhas. Minha atuação garante o equilíbrio entre experiência do usuário e máxima rentabilidade.
+
+Paralelamente, desenvolvo e-mails marketing responsivos e compatíveis com plataformas como Gmail e Outlook, utilizando técnicas avançadas para melhorar entregabilidade, leitura e performance visual. Aplico conceitos de estratégia de VA e testes A/B para potencializar resultados.
+
+No front-end, back-end ou nos bastidores da performance, sou aquele profissional que faz acontecer — com precisão técnica, visão estratégica e paixão por inovação.
+
+Alguns dos meus projetos
+🔷 Projetos Front-End
+Projeto Front-End 1
+Landing Page React
+Landing page pessoal do tipo moderno com React.
+
+Ver Projeto
+Projeto Front-End 2
+Em Breve
+Site responsivo com dark mode, animações e layout moderno.
+
+Ver Projeto
+🧩 Projetos Back-End
+Projeto Back-End 1
+Insync – Controle de Ponto Web com Relatórios Dinâmicos
+Sistema de controle de ponto desenvolvido com PHP, MySQL, HTML, CSS e JavaScript. Permite o registro de horários, autenticação de usuários e geração de relatórios mensais e gerenciais.
+
+Ver Projeto
+💾 Banco de Dados
+Projeto BD 1
+CRUD com MySQL
+Sistema de gerenciamento de usuários com interface simples.
+
+Ver Projeto
+✉️ E-mail Marketing
+Projeto Email 1
+Templates Responsivos
+Criação de e-mails compatíveis com Gmail e Outlook usando tabelas e media queries.
+
+Ver Projeto
+📈 GTM & AdManager
+Projeto GTM 1
+Setup GAM + Header Bidding
+Estruturação de anúncios com Prebid.js e Google Tag Manager.
+
+Ver Projeto
+Entre em contato
+Nome
+Email
+Mensagem
+
+Enviar

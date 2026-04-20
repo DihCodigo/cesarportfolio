@@ -1,3 +1,27 @@
+# César Diego Anovich - Portfolio
+
+## Overview
+
+A world-class personal portfolio for César Diego Anovich, a Full-Stack Developer and AdTech specialist. Built with React + Vite, featuring bilingual support (PT/EN), animations with Framer Motion, glassmorphism cards, floating WhatsApp button, and a dark navy/cyan/violet design.
+
+## Artifacts
+
+- **portfolio** — Main portfolio site at `/` (React + Vite)
+
+## Portfolio Features
+
+- Bilingual (PT/EN) with localStorage persistence
+- Animated hero with typewriter effect
+- Skills section with glassmorphism cards and hover glow effects
+- Projects section with 3D tilt hover cards
+- Activities section with stats
+- Contact form with send animation
+- Floating WhatsApp button with pulse animation
+- Smooth scroll navigation, Framer Motion scroll animations
+- Fully responsive (mobile hamburger menu)
+
+---
+
 # Workspace
 
 ## Overview
