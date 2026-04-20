@@ -1,6 +1,6 @@
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { ExternalLink, Code2, Database, Mail, BarChart2 } from "lucide-react";
+import { useRef, useState } from "react";
+import { motion, useInView, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { ExternalLink, Code2, Database, Mail, BarChart2, ArrowUpRight } from "lucide-react";
 import { useTranslation } from "@/hooks/use-translation";
 
 interface Project {
@@ -10,7 +10,9 @@ interface Project {
   link: string;
   icon: React.ReactNode;
   accent: string;
+  bgAccent: string;
   tags: string[];
+  number: string;
 }
 
 const projects: Project[] = [
@@ -21,7 +23,9 @@ const projects: Project[] = [
     link: "#",
     icon: <Code2 className="w-5 h-5" />,
     accent: "#00d4ff",
+    bgAccent: "from-[#00d4ff]/10",
     tags: ["React", "CSS3", "JavaScript"],
+    number: "01",
   },
   {
     titleKey: "proj.soon.title",
@@ -30,7 +34,9 @@ const projects: Project[] = [
     link: "#",
     icon: <Code2 className="w-5 h-5" />,
     accent: "#00d4ff",
+    bgAccent: "from-[#00d4ff]/10",
     tags: ["React", "Dark Mode", "Animation"],
+    number: "02",
   },
   {
     titleKey: "proj.insync.title",
@@ -39,7 +45,9 @@ const projects: Project[] = [
     link: "#",
     icon: <BarChart2 className="w-5 h-5" />,
     accent: "#7c3aed",
+    bgAccent: "from-[#7c3aed]/10",
     tags: ["PHP", "MySQL", "HTML", "CSS", "JS"],
+    number: "03",
   },
   {
     titleKey: "proj.crud.title",
@@ -48,7 +56,9 @@ const projects: Project[] = [
     link: "#",
     icon: <Database className="w-5 h-5" />,
     accent: "#00d4ff",
+    bgAccent: "from-[#00d4ff]/10",
     tags: ["MySQL", "CRUD", "SQL"],
+    number: "04",
   },
   {
     titleKey: "proj.email.title",
@@ -57,7 +67,9 @@ const projects: Project[] = [
     link: "#",
     icon: <Mail className="w-5 h-5" />,
     accent: "#7c3aed",
+    bgAccent: "from-[#7c3aed]/10",
     tags: ["HTML Email", "Media Queries", "Gmail", "Outlook"],
+    number: "05",
   },
   {
     titleKey: "proj.gam.title",
@@ -66,77 +78,178 @@ const projects: Project[] = [
     link: "#",
     icon: <BarChart2 className="w-5 h-5" />,
     accent: "#00d4ff",
+    bgAccent: "from-[#00d4ff]/10",
     tags: ["Prebid.js", "GTM", "GAM", "Header Bidding"],
+    number: "06",
   },
 ];
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+function TiltCard({ project, index }: { project: Project; index: number }) {
   const { t } = useTranslation();
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [hovered, setHovered] = useState(false);
+  const [spotlight, setSpotlight] = useState({ x: 50, y: 50 });
+
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [8, -8]), { stiffness: 200, damping: 20 });
+  const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-8, 8]), { stiffness: 200, damping: 20 });
+  const scale = useSpring(hovered ? 1.04 : 1, { stiffness: 200, damping: 20 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const normX = (e.clientX - rect.left) / rect.width - 0.5;
+    const normY = (e.clientY - rect.top) / rect.height - 0.5;
+    x.set(normX);
+    y.set(normY);
+    setSpotlight({
+      x: ((e.clientX - rect.left) / rect.width) * 100,
+      y: ((e.clientY - rect.top) / rect.height) * 100,
+    });
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+    setHovered(false);
+  };
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
+      ref={cardRef}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ delay: index * 0.1, duration: 0.6 }}
-      whileHover={{ y: -8 }}
+      transition={{ delay: index * 0.1, duration: 0.6, type: "spring", stiffness: 80 }}
+      style={{ rotateX, rotateY, scale, transformStyle: "preserve-3d", perspective: 1000 }}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={handleMouseLeave}
       data-testid={`project-card-${index}`}
-      className="group relative glass-card rounded-2xl p-6 flex flex-col gap-4 overflow-hidden transition-all duration-300 hover:border-white/20 cursor-default"
-      style={{ perspective: "1000px" }}
+      className="relative overflow-hidden rounded-2xl cursor-default group"
     >
-      {/* Shimmer border effect */}
+      {/* Base background */}
       <div
-        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        className="absolute inset-0 rounded-2xl"
         style={{
-          background: `linear-gradient(135deg, ${project.accent}30 0%, transparent 60%)`,
-          pointerEvents: "none",
+          background: `linear-gradient(145deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)`,
+          border: `1px solid rgba(255,255,255,0.08)`,
+          boxShadow: hovered
+            ? `0 20px 60px rgba(0,0,0,0.5), 0 0 40px ${project.accent}25, inset 0 1px 0 rgba(255,255,255,0.12)`
+            : `0 4px 20px rgba(0,0,0,0.3)`,
+          transition: "box-shadow 0.4s ease",
         }}
       />
 
-      {/* Top row */}
-      <div className="flex items-start justify-between">
-        <div
-          className="w-10 h-10 rounded-xl flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110"
-          style={{ background: `${project.accent}25`, color: project.accent }}
-        >
-          {project.icon}
+      {/* Mouse spotlight */}
+      <div
+        className="absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-300"
+        style={{
+          opacity: hovered ? 1 : 0,
+          background: `radial-gradient(300px circle at ${spotlight.x}% ${spotlight.y}%, ${project.accent}20 0%, transparent 65%)`,
+        }}
+      />
+
+      {/* Animated border beam on hover */}
+      <div
+        className="absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-500"
+        style={{
+          opacity: hovered ? 1 : 0,
+          background: `linear-gradient(135deg, ${project.accent}40, transparent 50%, ${project.accent}20)`,
+          mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          maskComposite: "exclude",
+          WebkitMaskComposite: "destination-out",
+          padding: "1px",
+        }}
+      />
+
+      {/* 3D lift layer (translateZ) */}
+      <div className="relative p-6 flex flex-col gap-4" style={{ transform: "translateZ(20px)" }}>
+        {/* Top row */}
+        <div className="flex items-start justify-between">
+          <div className="flex items-center gap-3">
+            <motion.div
+              className="w-11 h-11 rounded-xl flex items-center justify-center"
+              style={{
+                background: `${project.accent}20`,
+                border: `1px solid ${project.accent}35`,
+                color: project.accent,
+              }}
+              animate={hovered ? { rotate: [0, -5, 5, 0], scale: 1.1 } : { rotate: 0, scale: 1 }}
+              transition={{ duration: 0.4 }}
+            >
+              {project.icon}
+            </motion.div>
+            <span
+              className="text-4xl font-display font-black opacity-10 group-hover:opacity-20 transition-opacity duration-300"
+              style={{ color: project.accent }}
+            >
+              {project.number}
+            </span>
+          </div>
+
+          <motion.a
+            href={project.link}
+            data-testid={`project-link-${index}`}
+            className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300"
+            style={{
+              background: hovered ? `${project.accent}20` : "rgba(255,255,255,0.05)",
+              border: `1px solid ${hovered ? project.accent + "40" : "rgba(255,255,255,0.08)"}`,
+              color: hovered ? project.accent : "rgba(255,255,255,0.4)",
+            }}
+            whileHover={{ scale: 1.15, rotate: 45 }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ArrowUpRight className="w-4 h-4" />
+          </motion.a>
         </div>
-        <a
-          href={project.link}
-          data-testid={`project-link-${index}`}
-          className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:text-white hover:bg-white/10 transition-all duration-200"
-          target="_blank"
-          rel="noopener noreferrer"
+
+        {/* Category badge */}
+        <motion.span
+          className="self-start text-xs font-bold px-3 py-1 rounded-full"
+          style={{
+            background: `${project.accent}12`,
+            color: project.accent,
+            border: `1px solid ${project.accent}30`,
+          }}
+          animate={hovered ? { scale: 1.05 } : { scale: 1 }}
         >
-          <ExternalLink className="w-4 h-4" />
-        </a>
-      </div>
+          {t(project.categoryKey as any)}
+        </motion.span>
 
-      {/* Category badge */}
-      <span
-        className="self-start text-xs font-semibold px-3 py-1 rounded-full"
-        style={{ background: `${project.accent}15`, color: project.accent, border: `1px solid ${project.accent}30` }}
-      >
-        {t(project.categoryKey as any)}
-      </span>
-
-      {/* Title & desc */}
-      <div>
-        <h3 className="text-base font-display font-bold text-white mb-2 group-hover:text-primary transition-colors">
+        {/* Title */}
+        <h3
+          className="text-base font-display font-bold text-white leading-snug transition-colors duration-300"
+          style={{ color: hovered ? "white" : "rgba(255,255,255,0.9)" }}
+        >
           {t(project.titleKey as any)}
         </h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">
+
+        {/* Description */}
+        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
           {t(project.descKey as any)}
         </p>
-      </div>
 
-      {/* Tags */}
-      <div className="flex flex-wrap gap-2 mt-auto pt-2 border-t border-white/5">
-        {project.tags.map((tag) => (
-          <span key={tag} className="text-xs text-muted-foreground/80 bg-white/5 rounded-md px-2 py-0.5">
-            {tag}
-          </span>
-        ))}
+        {/* Tags */}
+        <div className="flex flex-wrap gap-1.5 pt-3 border-t border-white/5">
+          {project.tags.map((tag) => (
+            <motion.span
+              key={tag}
+              className="text-[11px] font-medium rounded-lg px-2 py-0.5 transition-all duration-300"
+              style={{
+                background: hovered ? `${project.accent}12` : "rgba(255,255,255,0.04)",
+                color: hovered ? project.accent : "rgba(255,255,255,0.45)",
+                border: `1px solid ${hovered ? project.accent + "25" : "rgba(255,255,255,0.05)"}`,
+              }}
+            >
+              {tag}
+            </motion.span>
+          ))}
+        </div>
       </div>
     </motion.div>
   );
@@ -151,13 +264,12 @@ export function ProjectsSection() {
     <section
       id="projects"
       className="relative py-28 overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #0a0e1a 0%, #0d1226 50%, #0a0e1a 100%)" }}
+      style={{ background: "linear-gradient(180deg, #0a0e1a 0%, #0c1120 50%, #0a0e1a 100%)" }}
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/20 to-transparent" />
-
-      <div className="absolute left-1/4 top-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute right-1/4 bottom-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute left-1/4 top-1/4 w-80 h-80 bg-primary/4 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute right-1/4 bottom-1/4 w-96 h-96 bg-secondary/4 rounded-full blur-3xl pointer-events-none" />
 
       <div ref={ref} className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -177,7 +289,7 @@ export function ProjectsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
-            <ProjectCard key={project.titleKey} project={project} index={i} />
+            <TiltCard key={project.titleKey} project={project} index={i} />
           ))}
         </div>
       </div>
