@@ -130,23 +130,6 @@ function SkillCard({ skill, index }: { skill: Skill; index: number }) {
           <p className="text-xs text-muted-foreground leading-relaxed">{t(skill.descKey as any)}</p>
         </div>
 
-        {/* Progress bar */}
-        <div className="w-full">
-          <div className="flex items-center justify-between mb-1">
-            <span className="text-[10px] text-muted-foreground/60">proficiency</span>
-            <span className="text-[10px] font-bold" style={{ color: skill.color }}>{skill.level}%</span>
-          </div>
-          <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
-            <motion.div
-              className="h-full rounded-full"
-              initial={{ width: 0 }}
-              whileInView={{ width: `${skill.level}%` }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.06 + 0.4, duration: 1, ease: "easeOut" }}
-              style={{ background: `linear-gradient(90deg, ${skill.color}99, ${skill.color})` }}
-            />
-          </div>
-        </div>
       </div>
     </motion.div>
   );
