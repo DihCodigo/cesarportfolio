@@ -32,11 +32,11 @@ const projects: Project[] = [
     descKey: "proj.api.desc",
     categoryKey: "projects.backend",
     link: "https://github.com/DihCodigo/Api_restful",
-    icon: <Database className="w-5 h-5" />,
+    icon: <Code2 className="w-5 h-5" />,
     accent: "#16a34a",
     bgAccent: "from-[#16a34a]/10",
     tags: ["Node.js", "Express", "MySQL", "REST API"],
-    number: "02",
+    number: "",
   },
   {
     titleKey: "proj.saturno.title",
