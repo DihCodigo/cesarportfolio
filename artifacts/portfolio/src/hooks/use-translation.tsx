@@ -102,6 +102,7 @@ const translations = {
     "skills.title": "Technologies",
     "skills.frontend": "Frontend",
     "skills.backend": "Backend",
+    "projects.fullstack" : "FullStack",
     "skills.db": "Database",
     "skills.tools": "Tools",
     
