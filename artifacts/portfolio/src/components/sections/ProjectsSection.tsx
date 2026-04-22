@@ -75,7 +75,7 @@ const projects: Project[] = [
     titleKey: "proj.gam.title",
     descKey: "proj.gam.desc",
     categoryKey: "projects.adtech",
-    link: "#",
+    link: "https://github.com/DihCodigo/GTMContainer",
     icon: <BarChart2 className="w-5 h-5" />,
     accent: "#00d4ff",
     bgAccent: "from-[#00d4ff]/10",
