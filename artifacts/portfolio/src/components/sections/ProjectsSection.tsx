@@ -46,8 +46,8 @@ const projects: Project[] = [
     icon: <BarChart2 className="w-5 h-5" />,
     accent: "#2563eb",
     bgAccent: "from-[#2563eb]/10",
-    tags: ["Angular", "NestJS", "MySQL", "Docker", "SaaS"],
-    number: "01",
+    tags: ["Angular", "NestJS", "MySQL", "SaaS"],
+    number: "",
   },
   {
     titleKey: "proj.crud.title",

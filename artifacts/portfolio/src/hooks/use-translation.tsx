@@ -60,6 +60,9 @@ const translations = {
     "projects.db": "Database",
     "projects.email": "Email Marketing",
     "projects.adtech": "GTM & AdManager",
+
+    "proj.saturno.title": "Saturno SaaS",
+    "proj.saturno.desc": "Sistema SaaS completo de controle de ponto eletrônico com multiempresa, geolocalização, relatórios avançados e arquitetura escalável.",
     
     "proj.lp.title": "Landing Page React",
     "proj.lp.desc": "Landing page pessoal do tipo moderno com React",
@@ -107,6 +110,9 @@ const translations = {
     "skills.react.desc": "Modern JS library",
     "skills.bootstrap.desc": "Popular CSS framework",
     "skills.tailwind.desc": "Modern CSS utility",
+
+    "proj.saturno.title": "Saturno SaaS",
+    "proj.saturno.desc": "Complete SaaS time tracking system with multi-tenant architecture, geolocation, advanced reports and scalable infrastructure.",
     
     "skills.node.desc": "JavaScript on the server",
     "skills.dotnet.desc": "Microsoft Platform",
