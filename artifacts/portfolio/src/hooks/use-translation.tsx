@@ -57,6 +57,7 @@ const translations = {
     "projects.title": "Projetos em Destaque",
     "projects.frontend": "Frontend",
     "projects.backend": "Backend",
+    "projects.fullstack" : "FullStack",
     "projects.db": "Database",
     "projects.email": "Email Marketing",
     "projects.adtech": "GTM & AdManager",
