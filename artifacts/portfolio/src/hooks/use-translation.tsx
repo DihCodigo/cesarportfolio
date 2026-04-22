@@ -67,6 +67,9 @@ const translations = {
 
     "proj.saturno.title": "Saturno SaaS",
     "proj.saturno.desc": "Sistema SaaS completo de controle de ponto eletrônico com multiempresa, geolocalização, relatórios avançados e arquitetura escalável.",
+
+    "proj.db.title": "Modelagem e Scripts SQL",
+    "proj.db.desc": "Coleção de scripts SQL com comandos DDL e DML para criação, alteração e manipulação de dados em banco relacional MySQL.",
     
     "proj.lp.title": "Landing Page React",
     "proj.lp.desc": "Landing page pessoal do tipo moderno com React",
@@ -121,6 +124,9 @@ const translations = {
 
     "proj.saturno.title": "Saturno SaaS",
     "proj.saturno.desc": "Complete SaaS time tracking system with multi-tenant architecture, geolocation, advanced reports and scalable infrastructure.",
+
+    "proj.db.title": "SQL Modeling & Scripts",
+    "proj.db.desc": "Collection of SQL scripts using DDL and DML commands for database structure creation and data manipulation in MySQL.",
     
     "skills.node.desc": "JavaScript on the server",
     "skills.dotnet.desc": "Microsoft Platform",
