@@ -71,7 +71,7 @@ const translations = {
     "proj.db.title": "Modelagem e Scripts SQL",
     "proj.db.desc": "Coleção de scripts SQL com comandos DDL e DML para criação, alteração e manipulação de dados em banco relacional MySQL.",
     
-    "proj.lp.title": "Landing Page React",
+    "proj.lp.title": "Landing Page",
     "proj.lp.desc": "Landing page pessoal do tipo moderno mobile first",
     "proj.soon.title": "Em Breve",
     "proj.soon.desc": "Site responsivo com dark mode, animações e layout moderno",
