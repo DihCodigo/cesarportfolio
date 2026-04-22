@@ -20,11 +20,11 @@ const projects: Project[] = [
     titleKey: "proj.lp.title",
     descKey: "proj.lp.desc",
     categoryKey: "projects.frontend",
-    link: "#",
+    link: "https://dihcodigo.github.io/meusProjetos/PrazerMinas/index.html",
     icon: <Code2 className="w-5 h-5" />,
     accent: "#00d4ff",
     bgAccent: "from-[#00d4ff]/10",
-    tags: ["React", "CSS3", "JavaScript"],
+    tags: ["HTML", "CSS3", "JavaScript"],
     number: "",
   },
   {

@@ -72,7 +72,7 @@ const translations = {
     "proj.db.desc": "Coleção de scripts SQL com comandos DDL e DML para criação, alteração e manipulação de dados em banco relacional MySQL.",
     
     "proj.lp.title": "Landing Page React",
-    "proj.lp.desc": "Landing page pessoal do tipo moderno com React",
+    "proj.lp.desc": "Landing page pessoal do tipo moderno mobile first",
     "proj.soon.title": "Em Breve",
     "proj.soon.desc": "Site responsivo com dark mode, animações e layout moderno",
     "proj.insync.title": "Insync – Controle de Ponto Web",
@@ -153,7 +153,7 @@ const translations = {
     "projects.adtech": "GTM & AdManager",
     
     "proj.lp.title": "Modern Landing Page",
-    "proj.lp.desc": "Modern personal landing page with React",
+    "proj.lp.desc": "Modern personal landing page with mobile first",
     "proj.soon.title": "Coming Soon",
     "proj.soon.desc": "Responsive site with dark mode, animations and modern layout",
     "proj.insync.title": "Insync – Web Time Tracking",
