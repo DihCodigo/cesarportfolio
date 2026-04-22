@@ -62,6 +62,9 @@ const translations = {
     "projects.email": "Email Marketing",
     "projects.adtech": "GTM & AdManager",
 
+    "proj.api.title": "API RESTful de Usuários",
+    "proj.api.desc": "API backend desenvolvida em Node.js para cadastro de usuários com MySQL. Possui endpoints para criação, listagem, busca por ID e exclusão de registros.",
+
     "proj.saturno.title": "Saturno SaaS",
     "proj.saturno.desc": "Sistema SaaS completo de controle de ponto eletrônico com multiempresa, geolocalização, relatórios avançados e arquitetura escalável.",
     
@@ -112,6 +115,9 @@ const translations = {
     "skills.react.desc": "Modern JS library",
     "skills.bootstrap.desc": "Popular CSS framework",
     "skills.tailwind.desc": "Modern CSS utility",
+
+    "proj.api.title": "User RESTful API",
+    "proj.api.desc": "Backend API built with Node.js for user management using MySQL. Includes endpoints for create, list, find by ID and delete operations.",
 
     "proj.saturno.title": "Saturno SaaS",
     "proj.saturno.desc": "Complete SaaS time tracking system with multi-tenant architecture, geolocation, advanced reports and scalable infrastructure.",
